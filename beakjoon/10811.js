@@ -8,7 +8,6 @@ let arr = [];
 
 for (let i = 1; i <= n; i++) { 
     arr.push(i);
-
 } 
 
 for (let i = 1; i <= m; i++) {
@@ -18,7 +17,6 @@ for (let i = 1; i <= m; i++) {
 
     for (let j = 0; j < newNums.length; j++) {
         arr[start - 1 + j] = newNums[j];
-
     }
 }
 
