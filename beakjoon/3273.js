@@ -8,7 +8,6 @@ const arr = input[1].split(' ').map(Number);
 const x = parseInt(input[2]);
 
 arr.sort((a, b) => a - b); //오름차순 공식 외우기
-
 let point1 = 0;
 let point2 = n-1;
 let count = 0;
