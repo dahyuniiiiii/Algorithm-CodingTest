@@ -1,20 +1,16 @@
-const fs = require('fs'); 
-const input = fs.readFileSync('/dev/stdin').toString().trim().split("\n");
-const words = ['a','e','i','o','u','A','E','I','O','U'];
-while(true){
-    for(word of words){
-        console.log(input[index].length);
-    }
-    if(input =="#"){
-        break;
-    }
-}
-for (let line of input) {
-    if (line === "#") break;
+const fs = require('fs');
+const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
+const input = fs.readFileSync(filePath).toString().trim().split('\n');
+
+const arr = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+for (let i = 0; i < input.length; i++) {
+    const line = input[i];
+    if (line === '#') break;
 
     let count = 0;
-    for (let char of line) {
-        if (vowels.includes(char)) {
+    for (let j = 0; j < line.length; j++) {
+        if (arr.includes(line[j])) {
             count++;
         }
     }
