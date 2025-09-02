@@ -3,6 +3,13 @@ const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 const input = fs.readFileSync(filePath).toString().trim().split("\n");
 const num = parseInt(input[0]);
 
-for (let i = 1; i <= num; i++) {
-  console.log(" ".repeat(num-i)+"* ".repeat(i).trim());
+for (let i = 0; i < 2 * num; i++) {
+  for (let j = 0; j < num; j++) {
+    if (i % 2 == 0) {
+      process.stdout.write(j % 2 === 0 ? "*" : " ");
+    } else {
+      process.stdout.write(j % 2 === 0 ? " " : "*");
+    }
+  }
+  console.log();
 }
