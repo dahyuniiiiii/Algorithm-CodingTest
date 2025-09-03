@@ -10,5 +10,4 @@ for (let i = 2; i <= n; i++) {
   a = b;
   b = result;
 }
-
 console.log(n === 0 ? a : b);
